@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorMAUI.MainPage">
+
+    <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Display -->
+        <Entry x:Name="ProcessyEntry" Grid.Row="0" Grid.ColumnSpan="4" FontSize="20" HeightRequest="40" HorizontalTextAlignment="End" VerticalTextAlignment="Center" BackgroundColor="LightGray" IsReadOnly="True" />
+        <Entry x:Name="DisplayEntry" Grid.Row="1" Grid.ColumnSpan="4" FontSize="36" HorizontalTextAlignment="End" VerticalTextAlignment="Center" BackgroundColor="LightGray" IsReadOnly="True" />
+        
+        <!-- Buttons -->
+        <Button Clicked="Number_Clicked" Text="7" Grid.Row="2" Grid.Column="0" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Number_Clicked" Text="8" Grid.Row="2" Grid.Column="1" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Number_Clicked" Text="9" Grid.Row="2" Grid.Column="2" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Operator_Clicked" Text="/" Grid.Row="2" Grid.Column="3" FontSize="24" BackgroundColor="#FFA500" TextColor="White" />
+
+        <Button Clicked="Number_Clicked" Text="4" Grid.Row="3" Grid.Column="0" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Number_Clicked" Text="5" Grid.Row="3" Grid.Column="1" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Number_Clicked" Text="6" Grid.Row="3" Grid.Column="2" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Operator_Clicked" Text="*" Grid.Row="3" Grid.Column="3" FontSize="24" BackgroundColor="#FFA500" TextColor="White" />
+
+        <Button Clicked="Number_Clicked" Text="1" Grid.Row="4" Grid.Column="0" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Number_Clicked" Text="2" Grid.Row="4" Grid.Column="1" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Number_Clicked" Text="3" Grid.Row="4" Grid.Column="2" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Operator_Clicked" Text="-" Grid.Row="4" Grid.Column="3" FontSize="24" BackgroundColor="#FFA500" TextColor="White" />
+
+        <Button Clicked="Clear_Clicked" Text="C" Grid.Row="5" Grid.Column="0" FontSize="24" BackgroundColor="#FF6347" TextColor="White" />
+        <Button Clicked="Number_Clicked" Text="0" Grid.Row="5" Grid.Column="1" FontSize="24" BackgroundColor="#E0E0E0" />
+        <Button Clicked="Equals_Clicked" Text="=" Grid.Row="5" Grid.Column="2" FontSize="24" BackgroundColor="#32CD32" TextColor="White" />
+        <Button Clicked="Operator_Clicked" Text="+" Grid.Row="5" Grid.Column="3" FontSize="24" BackgroundColor="#FFA500" TextColor="White" />
+    </Grid>
+
+</ContentPage>
